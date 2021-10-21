@@ -1,0 +1,93 @@
+git init  ---初始化
+
+$ git status
+
+
+看commit log  -5 為指定數量
+$ git log --oneline -5
+
+$ git log
+$ git log --oneline --graph
+*找某個人
+$ git log --oneline --author="Sherly"
+$ git log --oneline --author="Sherly\|Eddie"
+*搜尋符合字樣
+$ git log --oneline --grep="wtf"
+*指定時間
+$ git log --oneline --since="9am" --until="12am" --after="2017-01"
+
+
+
+$ git add 主檔名.副檔名
+$ git add --all
+
+$ git commit
+$ git commit -a -m "敘述"
+(這樣即使沒有先 add 也可以完成 Commit。但要注意的是這個 -a 參數只對已經存在 Repository 的檔案有效，對還是新加入的檔案（也就是 Untracked file）是無效的(使用 add)。)
+
+$ git push
+$ git push origin 分支名稱  (非預設分支)
+
+*修改預設push
+$ git push --set-upstream origin cat
+
+$ git pull
+$ git pull origin 分支名稱  (非預設分支)
+
+
+$ git branch
+$ git branch cat
+(刪除branch)
+$ git branch -d dog
+
+
+$ git branch
+$ git branch 名稱  (new a branch)
+
+$ git checkout branch的名稱
+
+
+
+------------
+*add
+
+git add --all
+
+-------------
+
+
+*Reset、Revert 跟 Rebase 指令有什麼差別？------------------------------
+
+https://gitbook.tw/chapters/rewrite-history/reset-revert-and-rebase.html
+
+Reset - 把目前的狀態設定成某個指定的 Commit 的狀態
+Rebase - 新增、修改、刪除 Commit 
+Revert - 新增一個 Commit 來反轉（或說取消）另一個 Commit 的內容，原本的 Commit 依舊還是會保留在歷史紀錄中。雖然會因此而增加 Commit 數，但通常比較適用於已經推出去(push)的 Commit，或是不允許使用 Reset 或 Rebase 之修改歷史紀錄的指令的場合。
+
+-----------------
+
+git reflog
+Reflog 預設會保留 30 天 commit
+
+-----------------
+使用者
+git config user.name
+git config user.email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
