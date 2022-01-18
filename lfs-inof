@@ -1,0 +1,17 @@
+* 參考: https://git-lfs.github.com/
+* 參考: https://haway.30cm.gg/git-lfs/
+
+## Git LFS(Large File Storage)
+* 檔案超過100M,會無法push
+
+### 上傳
+1. 安裝 git LFS : https://git-lfs.github.com/
+2. 安裝後請 install : git lfs install -> 完成會show : Git LFS initialized.
+3. 加入要使用 LFS 檔案 : git lfs track "*.exe" -> 副檔名.exe檔案會使用LFS
+4. 會產生 .gitattributes 檔案紀錄要使用 LFS 檔案資料
+
+### 下載 
+1. 下載裝置也要安裝 與 install 同 上傳 1與2點
+2. 如果使用GitHub zip下載 , 專案settings中的 Achives 中 "include Git LFS objects in archieve"勾選
+(https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-git-lfs-objects-in-archives-of-your-repository)
+* 未設定LFS並不會完整下載(變成一個 130 bytes 的文字檔)
