@@ -1,0 +1,29 @@
+1.建立本機端ssh
+$ ssh-keygen -t rsa -C "maggylin0317@gmail.com"
+
+```
+C:\>ssh-keygen -t rsa -C "maggylin0317@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\user/.ssh/id_rsa):
+Created directory 'C:\Users\user/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\user/.ssh/id_rsa.
+Your public key has been saved in C:\Users\user/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:7lFWMrh2Vp...XXXXXXXXmZsw maggylin0317@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|        .+==.o.=*|
+...
+|       . .       |
+|        .        |
++----[SHA256]-----+
+
+```
+
+2.獲取ssh (使用git bash輸入)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQAB.......................zne6EOa0V8EUSiIs9vdy3jU= maggylin0317@gmail.com
+
+3.進入github設定SSH (參考:gitHub_set_ssh.PNG)
